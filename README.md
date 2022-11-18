@@ -115,6 +115,12 @@ use {
   -- directory.
   silent_chdir = true,
 
+  -- What scope to change the directory, valid options are
+  -- * global (default)
+  -- * tab
+  -- * win
+  scope_chdir = 'global',
+
   -- Path where project.nvim will store the project history for use in
   -- telescope
   datapath = vim.fn.stdpath("data"),
@@ -170,6 +176,12 @@ List your exclusions before the patterns you do want.
 To enable telescope integration:
 ```lua
 require('telescope').load_extension('projects')
+```
+
+#### Telescope Projects Picker
+To use the projects picker
+```lua
+require'telescope'.extensions.projects.projects{}
 ```
 
 #### Telescope mappings
